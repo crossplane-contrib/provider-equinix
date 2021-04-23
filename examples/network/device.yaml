@@ -1,0 +1,8 @@
+apiVersion: network.equinix.crossplane.io/v1alpha1
+kind: Device
+metadata:
+  name: "test-device"
+  annotations:
+    crossplane.io/external-name: "6b972321-e3ac-4bfb-a709-77a40d07a6bd"
+spec:
+  forProvider: {}

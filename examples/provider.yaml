@@ -1,0 +1,12 @@
+apiVersion: equinix.crossplane.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: default
+spec:
+  credentials:
+    secretRef:
+      # key field should contain: {"client_id":"...", "client_secret":"..."}
+      key: key
+      name: equinix-creds
+      namespace: crossplane-system
+    source: Secret
