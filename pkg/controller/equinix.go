@@ -23,6 +23,7 @@ import (
 	"github.com/crossplane/crossplane-runtime/pkg/logging"
 
 	"github.com/crossplane-contrib/provider-equinix/pkg/controller/config"
+	"github.com/crossplane-contrib/provider-equinix/pkg/controller/network"
 )
 
 // Setup creates all Equinix controllers with the supplied logger and adds them
@@ -30,6 +31,7 @@ import (
 func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter) error {
 	for _, setup := range []func(ctrl.Manager, logging.Logger, workqueue.RateLimiter) error{
 		config.Setup,
+		network.SetupDevice,
 	} {
 		if err := setup(mgr, l, rl); err != nil {
 			return err

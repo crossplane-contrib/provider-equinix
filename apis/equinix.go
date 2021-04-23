@@ -20,6 +20,7 @@ package apis
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
+	networkv1alpha1 "github.com/crossplane-contrib/provider-equinix/apis/network/v1alpha1"
 	equinixv1alpha3 "github.com/crossplane-contrib/provider-equinix/apis/v1alpha3"
 	equinixv1beta1 "github.com/crossplane-contrib/provider-equinix/apis/v1beta1"
 )
@@ -29,6 +30,7 @@ func init() {
 	AddToSchemes = append(AddToSchemes,
 		equinixv1alpha3.SchemeBuilder.AddToScheme,
 		equinixv1beta1.SchemeBuilder.AddToScheme,
+		networkv1alpha1.SchemeBuilder.AddToScheme,
 	)
 }
 

@@ -1,5 +1,4 @@
 # provider-equinix
-
 ## Overview
 
 `provider-equinix` is the Crossplane infrastructure provider for [Equinix](https://www.equinix.com/).
